@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Announcement System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Login Form Section -->
+  <div id="loginSection" class="container">
+    <div class="login-form">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <div id="loginError" class="error-message"></div>
+    </div>
+  </div>
+
+  <!-- Announcement System Section (initially hidden) -->
+  <div id="announcementSection" class="container" style="display: none;">
+    <h1>Hospital Announcement System</h1>
+    <div id="announcementTypes" class="announcement-types"></div>
+
+    <div class="form-group">
+      <label for="floorSelect">Floor:</label>
+      <select id="floorSelect"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="roomSelect">Room:</label>
+      <select id="roomSelect"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="customMessage">Additional Message:</label>
+      <textarea id="customMessage"></textarea>
+    </div>
+
+    <button id="generateBtn">Generate Announcement</button>
+
+    <div id="feedback" style="display: none;"></div>
+    <!-- <div id="json-feedback" style="display: none;"></div> -->
+
+    <div id="audio-player-container" style="display: none;">
+      <audio id="announcement-audio" controls></audio>
+    </div>
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>

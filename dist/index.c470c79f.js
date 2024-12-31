@@ -1,0 +1,2 @@
+const e=[{username:"admin",password:"admin123"},{username:"user",password:"user123"}];document.getElementById("loginForm").addEventListener("submit",n=>{n.preventDefault();let t=document.getElementById("username").value,s=document.getElementById("password").value,o=document.getElementById("loginError");e.find(e=>e.username===t&&e.password===s)?(sessionStorage.setItem("isLoggedIn","true"),window.location.href="./announcement.html"):o.textContent="Invalid username or password"});
+//# sourceMappingURL=index.c470c79f.js.map
