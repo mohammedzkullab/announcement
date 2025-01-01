@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function textToSpeech(message) {
   try {
     const response = await fetch(
-      "https://api.elevenlabs.io/v1/text-to-speech/R6nda3uM038xEEKi7GFl",
+      "https://api.elevenlabs.io/v1/text-to-speech/pqHfZKP75CvOlQylNhV4",
       {
         method: "POST",
         headers: {
@@ -124,7 +124,8 @@ async function textToSpeech(message) {
         },
         body: JSON.stringify({
           text: message,
-          model_id: "eleven_multilingual_v2",
+          model_id: "eleven_turbo_v2_5",
+          language_code: "en",
           voice_settings: {
             stability: 0.5,
             similarity_boost: 0.5,
